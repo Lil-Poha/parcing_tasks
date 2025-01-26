@@ -1,3 +1,8 @@
+"""
+Парсер для центробанка, с 2003 по 2024 год.
+Сохраняет в файле все курсы первого числа каждого месяца.
+"""
+
 #с января 2003 по декабрь 2024
 import re
 import requests
@@ -28,5 +33,6 @@ for i in range(22):
         month_dict[str(j) + '_' + str(2003 + i)] = year_dict
     # base_dict[2003 + i] = month_dict
 sim = json.dumps(month_dict)
-with open('fign.txt', 'w') as f:
+with open('sfign.txt', 'w') as f:
     f.write(sim)
+
